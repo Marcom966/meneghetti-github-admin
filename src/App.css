@@ -28,6 +28,15 @@
   color: #61dafb;
 }
 
+image-class {
+  margin-right: 2em;
+  margin-right: 1em;
+}
+
+.navbar {
+  border-color: black;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +44,6 @@
   to {
     transform: rotate(360deg);
   }
+
+
 }
