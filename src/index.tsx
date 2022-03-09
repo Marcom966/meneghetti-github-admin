@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import reportWebVitals from './reportWebVitals';  
+import { Githubreturn } from './components/Githubreturn';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />} ></Route>
+        <Route path='/githubreturn' element={<Githubreturn />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

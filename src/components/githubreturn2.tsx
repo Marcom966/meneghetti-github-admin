@@ -15,11 +15,10 @@ export const Githubadmin = async() =>{
             console.error(error);
             throw error;
         }
-    
-    return arrayOfStudents;
 
-    {/*
-        {studentiReturn.map((studente: Object)=>{
+
+    
+        {/*{studentiReturn.map((studente: Object)=>{
             <div className='dettaglioStudente'>
             nome: {studente.name}<br></br>
             cognome: {studente.surname}<br></br>
@@ -27,5 +26,5 @@ export const Githubadmin = async() =>{
             login: {studente.login}<br></br>
     </div>
         })}*/}
-
+        return arrayOfStudents;
 }
