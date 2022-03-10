@@ -27,7 +27,7 @@ function App() {
           </div>
           <div id="button">
             <input type="text" />
-            <button type='button' onClick={() => Changecontext('true')}>
+            <button type='button'>
               <Link to={'./Githubreturn'} onClick={Githubreturn}>Login</Link>
             </button>
           </div>
