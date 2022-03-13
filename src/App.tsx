@@ -10,6 +10,7 @@ import { utente } from './components/page2';
 import { Link } from 'react-router-dom';
 import Changecontext from './components/Context';
 import Alert from './components/altert';
+import validateAlert from './components/validateAlert';
 
 function App() {
   return (
@@ -23,12 +24,12 @@ function App() {
       <div className='app-login'>
         <div className="utenteLogin">
           <div id="button" >
-            <input type="text" />
+            <input type="text" id='login name'/>
           </div>
           <div id="button">
-            <input type="text" />
-            <button type='button'>
-              <Link to={'./Githubreturn'} onClick={Githubreturn}>Login</Link>
+            <input type="text" id='login password'/>
+            <button type='button' onClick={()=>validateAlert()}>login
+{/*<Link to={'./Githubreturn'} onClick={Githubreturn}>Login</Link>*/}
             </button>
           </div>
           <br></br>
