@@ -8,11 +8,18 @@ export default function Changecontext(context: string){
 
     }
     if (context!='false'){
-        const context2 = 'true';
-        console.log('contesto: '+context2)
+        Changecontext('true');
     }else{
         console.log('non ha letto');
     }
 
     const themeContext = createContext(defaultContext);
+}
+
+export function seeContext(){
+    let currentContext = useContext;
+    let currentcontext2 = currentContext.toString();
+    if (currentcontext2!='true'){
+        window.open('localhost:3000','_self');
+    } 
 }

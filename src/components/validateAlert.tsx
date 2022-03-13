@@ -11,8 +11,8 @@ export default function validateAlert(){
         let passwordString = password.value;
         if ((userNameString=="Marco") && (passwordString=="1234gyugyu")){
             {console.log('it did went trough!')}
-            {window.open('http://localhost:3000/Githubreturn')}
-        }else{
+            {window.open('http://localhost:3000/Githubreturn','_self')}
+            }else{
             Alert();
         }
 }
