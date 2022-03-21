@@ -1,0 +1,37 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "SWA: Run meneghetti-github-admin",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:4280",
+            "preLaunchTask": "swa: start meneghetti-github-admin",
+            "webRoot": "${workspaceFolder}/",
+            "timeout": 30000
+        },
+        {
+            "name": "Debug CRA Tests",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+            "args": ["test", "--env=node", "--runInBand", "--no-cache", "--watchAll=false"],
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "env": { "CI": "true" },
+            "disableOptimisticBPs": true
+          }
+    ]
+}

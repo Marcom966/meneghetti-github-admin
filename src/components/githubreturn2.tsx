@@ -2,19 +2,13 @@ import React from "react";
 import axios from "axios";
 
 
-export const Githubadmin = async() =>{
-    try{
+export default async function Githubadmin(){
+    
 
         var arrayOfStudents = [];
         const res = await axios.get("https://github-function-app.azurewebsites.net/api/HttpStudentsRepos");
             arrayOfStudents = res.data.results;
         console.log(arrayOfStudents);
-
-
-        }catch (error){
-            console.error(error);
-            throw error;
-        }
 
 
     
