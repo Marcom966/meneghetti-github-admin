@@ -22,7 +22,9 @@ describe('repos pieno', ()=>{
 
 
     it('rete in down', ()=>{
-        
+        let error = 'getaddrinfo ENOTFOUND github-function-app.azurewebsites.net';
+        expect(()=>Githubadmin()).rejects.toThrow(error);
+
     })
 
     it('error 500', ()=>{
