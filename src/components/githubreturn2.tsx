@@ -5,7 +5,7 @@ import axios from "axios";
 export default async function Githubadmin(){
     
 
-        var arrayOfStudents = [];
+        let arrayOfStudents = [];
         const res = await axios.get("https://github-function-app.azurewebsites.net/api/HttpStudentsRepos");
             arrayOfStudents = res.data.results;
         console.log(arrayOfStudents);

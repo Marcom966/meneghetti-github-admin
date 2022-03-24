@@ -25,13 +25,52 @@
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
-            "args": ["test", "--env=node", "--runInBand", "--no-cache", "--watchAll=false"],
+            "args": ["test", "--env=node", "--no-cache", "--watchAll=false"],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "env": { "CI": "true" },
             "disableOptimisticBPs": true
+          },
+          {
+
+            "type": "node",
+
+            "request": "launch",
+
+            "name": "Run selected Jest test",
+
+            "runtimeExecutable": "npm",
+
+            "runtimeArgs": [
+
+              "run-script",
+
+              "test",
+
+              "--coverage",
+
+              "false"
+
+            ],
+
+            "args": [
+
+              "--",
+
+              "-i",
+
+              "${relativeFile}",
+
+              "-t",
+
+              "${selectedText}"
+
+            ],
+
+            "console": "integratedTerminal"
+
           }
     ]
 }
